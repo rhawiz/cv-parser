@@ -1,16 +1,19 @@
 import docx
 import re
-import nltk
-from nameparser.parser import HumanName
+# import os
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from pdfminer.pdfpage import PDFPage
 from cStringIO import StringIO
 
+# java_path = "C:/Program Files/Java/jdk1.8.0_91/bin/java.exe"
+# os.environ['JAVAHOME'] = java_path
+
 cv = 0
 email = 0
 name = 0
+
 
 def document_to_text(filename):
     if filename[-5:] == ".docx":
@@ -57,13 +60,5 @@ def get_email(cv):
 
 
 # Convert document to text
-document_to_text("resources\CV.pdf")
-
-# Extract name
-
-# Extract address
-
-# Extract phone number
-
-# Extract email address
-get_email(cv)
+document_to_text("resources\CV.docx")
+print cv
