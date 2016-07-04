@@ -1,7 +1,8 @@
 import random
+from fake_useragent import UserAgent
 
 BASE_REQUEST_HEADER = {
-    'ACCEPT_LANGUAGE': '	en-GB,en;q=0.8,en-US;q=0.6'
+    'ACCEPT_LANGUAGE': 'en-GB,en;q=0.8,en-US;q=0.6'
 }
 
 HTTP_PROXIES = [
@@ -134,5 +135,7 @@ def generate_proxy_dict():
 
 def generate_request_header():
     header = BASE_REQUEST_HEADER
-    header["User-Agent"] = USER_AGENT_HEADER_LIST[random.randint(0, len(USER_AGENT_HEADER_LIST) - 1)]
+    #header["User-Agent"] = USER_AGENT_HEADER_LIST[random.randint(0, len(USER_AGENT_HEADER_LIST) - 1)]
+    ua = UserAgent()
+    header["User-Agent"] = ua.random
     return header
