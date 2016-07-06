@@ -10,13 +10,13 @@ import urllib
 BASE_URL = "http://www.indeed.com/resumes?q=%s&l=%s&co=%s&start=%s"
 DOWNLOAD_BASE_URL = "http://www.indeed.com%s/pdf"
 categories = (
-    "defence", "banking", "financial services", "business", "management",
+    "media", "publishing", "journalism", "medical",
+    "pharmaceutical", "health care", "property", "real estate", "public", "government", "social", "retail", "buying",
+    "merchandising", "fmcg", "sales", "science", "research", "banking", "financial services", "business", "management",
     "charity", "non-profit", "construction", "property", "quantity surveying", "building", "surveying", "consultancy",
     "strategy", "education", "training", "teaching", "engineering", "manufacturing", "fashion", "hospitality", "travel",
     "tourism", "hr", "recruitment", "insurance", "IT", "technology", "telecommunications", "legal", "law", "logistics",
-    "transport", "supplychain", "marketing", "pr", "advertising", "media", "publishing", "journalism", "medical",
-    "pharmaceutical", "healthcare", "property", "real estate", "public", "government", "social", "retail", "buying",
-    "merchandising", "fmcg", "sales", "science", "research", #"accounting", "finance", " aerospace",
+    "transport", "supply chain", "marketing", "pr", "advertising",  # "defence", "accounting", "finance", " aerospace",
 )
 
 def scrape(category, city, country_code, count):
